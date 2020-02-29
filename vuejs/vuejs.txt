@@ -1,0 +1,41 @@
+1. cnpm
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+cnpm install cnpm -g   (安装cnpm)
+cnpm install vue   (安装vue)
+cnpm install --global vue-cli   （安装vue-cli）
+
+2. 搭建vue项目
+vue init webpack 项目名称
+cd 项目目录下
+npm run dev   (运行项目)
+
+3. 安装elementui
+npm i element-ui –S   （安装elementui）
+在package.json可以看到elementui已经安装好了
+//main.js中
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+4. 安装axios:
+cd 项目目录下 
+cnpm install axios -S
+cnpm install vue-axios -S
+
+//main.js中
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
+//然后你就能愉快地使用axios啦
+
+5. config/index.js 需要配置
+proxyTable: {
+      '/coms' : {
+        target: 'http://127.0.0.1:10081',
+        changeOrigin: true
+      }
+},
+	
+
